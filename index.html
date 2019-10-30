@@ -6,74 +6,128 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <title>Be.Pro</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
     <nav>
-      <a class="logo">Be.Pro</a>
-      <ul class="site-navigation"></ul>
-      <ul class="user-navigation"></ul>
+      <!-- todo: построить верхнее меню на flex -->
+      <div class="container clearfix">
+        <a class="logo">Be.Pro</a>
+        <ul class="site-navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Page</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Elements</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Busket</a></li>
+          <li><a href="#">Find</a></li>
+        </ul>
+      </div>
     </nav>
     <h1 class="visually-hidden">Be.Pro shopping</h1>
   </header>
 
   <main>
     <section class="new-arrival">
-      <h2>New Arrival</h2>
-      <div class="slider">
-        <div class="slide">
-          <!-- todo: слово Fashion - это часть самого слайда.
-                У другого слайда может быть другое слово, например, Style или Casual
-                А вот надпись new arrival - это должно быть сверху всех слайдов, также как и кнопка Buy Now.
-                Ну, или, на каждом слайде кнопка с надписью
-              -->
-          <b class="product-tag">Fashion</b>
-          <img src="http://placehold.it/560x766" width="560" height="766" alt="Glasses">
-          <a href="#">Buy now</a>
+      <div class="container">
+        <!--
+          Макет учебный, заказчика нет, никто не знает, что должно быть в слайдере.
+          Я могу просто для себя что-то решить.
+          Предполагаю, что эта секция о новинках - новых поступлениях. И все. Слайды однородные по содержанию.
+          Каждый слайд - это своеобразная карточка нового товара, которая имеет определенную структуру:
+            тег, картинку (обязательно полупрозрачную) и кнопку "Купить". Кнопка должна быть на каждом слайде для
+            доступности.
+          Это не как в intertop, где сверху огромный слайдер, слайды которого не связаны между собой.
+          С другой стороны, в том же intertop все слайды - это картинки, которые уже содержат текст. Отдельно
+            текста нет, нет структуры. Можно предположить, что и этот сайт может также на слайдах использовать
+            картинки, только кнопка "Купить" навешивается.
+          Я не знаю, для себя решил, что для тренировки слайды не будут являться картинками.
+         -->
+        <h2>New Arrival</h2>
+        <div class="slider">
+          <input type="radio" id="new-arrival-btn-1" name="toggle" checked>
+          <input type="radio" id="new-arrival-btn-2" name="toggle">
+          <div class="slides">
+            <div class="slide">
+              <b class="product-tag">Fashion</b>
+              <img src="img/new-arrival-1.png" width="447" height="650" alt="Glasses">
+              <a href="#" class="buy-button">Buy now</a>
+            </div>
+            <div class="slide">
+              <b class="product-tag">Casual</b>
+              <img src="http://placehold.it/447x650" width="447" height="650" alt="Dress">
+              <a href="#" class="buy-button">Buy now</a>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <div class="slider-arrows clearfix">
+              <label for="new-arrival-btn-1" class="slider-left">Стрелка налево</label>
+              <label for="new-arrival-btn-2" class="slider-right">Стрелка направо</label>
+            </div>
+          </div>
         </div>
-        <div class="slide">
-          <b class="product-tag">Casual</b>
-          <img src="http://placehold.it/560x766" width="560" height="766" alt="Dress">
-          <a href="#">Buy now</a>
-        </div>
-        <div class="slider-controls"></div>
       </div>
     </section>
-    <section class="features">
+    <section class="features container">
       <h2 class="visually-hidden">Features</h2>
+      <dl>
+        <dt>Free Shipping</dt>
+        <dd>Oders over $99</dd>
+        <dt>30 days return</dt>
+        <dd>If goods have problem</dd>
+        <dt>Secure payment</dt>
+        <dd>100% secure payment</dd>
+        <dt>24h Support</dt>
+        <dd>Dedicated Support</dd>
+      </dl>
     </section>
-    <section class="popular-items">
+    <section class="popular-items container">
       <h2>Popular product</h2>
       <a href="#">More product</a>
     </section>
-    <section class="events">
+    <section class="events container">
       <h2 class="visually-hidden">Events</h2>
-      <div class="slider"></div>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <!-- <img src="img/event-1.jpg" width="1366" height="400" alt="London Fashion Week September 2017"> -->
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="top-items">
+    <section class="top-items container">
       <h2 class="visually-hidden">Top products</h2>
     </section>
-    <section class="blog">
+    <section class="blog container">
       <h2 class="visually-hidden">Our Blog</h2>
       <div class="pages slider"></div>
     </section>
   </main>
 
-  <aside class="logos">
+  <aside class="logos container">
   </aside>
 
   <footer>
-    <div class="layout-column">
-      <span class="logo">ModaX</s>
+    <div class="container">
+      <div class="layout-column">
+        <span class="logo">ModaX</span>
+      </div>
+      <div class="layout-column">
+        <nav>
+          <ul class="product-navigation"></ul>
+        </nav>
+        <form class="footer-subscribe"></form>
+      </div>
+      <div class="layout-column"></div>
     </div>
-    <div class="layout-column">
-      <nav>
-        <ul class="product-navigation"></ul>
-      </nav>
-      <form action="" class="footer-subscribe"></form>
-    </div>
-    <div class="layout-column"></div>
   </footer>
 </body>
 

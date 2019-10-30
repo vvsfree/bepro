@@ -6,14 +6,31 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <title>Be.Pro Catalog</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
     <nav>
-      <a href="index.html" class="logo">Be.Pro</a>
-      <ul class="site-navigation"></ul>
-      <ul class="user-navigation"></ul>
+      <!-- todo: построить верхнее меню на flex -->
+      <div class="container clearfix">
+        <a href="index.html" class="logo">Be.Pro</a>
+        <ul class="site-navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Page</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Elements</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Busket</a></li>
+          <li><a href="#">Find</a></li>
+        </ul>
+      </div>
     </nav>
     <h1>Men’s Lifestyle Clothing</h1>
     <ul class="breadcrumbs"></ul>
@@ -44,7 +61,7 @@
       <nav>
         <ul class="product-navigation"></ul>
       </nav>
-      <form action="" class="footer-subscribe"></form>
+      <form class="footer-subscribe"></form>
     </div>
     <div class="layout-column"></div>
   </footer>
